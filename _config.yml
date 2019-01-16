@@ -1,1 +1,33 @@
-theme: jekyll-theme-cayman
+# Filename: _config.yml
+
+# Site-wide Variables:
+name: "Bram Kragten"
+description: "A Personal Technology Blog"
+
+# Social Media
+twitter: "bramkragten"
+github: "bramkragten"
+linkedin: "bramkragten"
+
+# Site Navigation
+nav:
+  - name: "Home"
+    url: "/index"
+  - name: "About"
+    url: "/about"
+
+
+# Build Settings:
+## Theme
+markdown: kramdown
+theme: minima
+highlighter: rouge
+
+## Pagination
+paginate: 5
+
+## Plugin
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
