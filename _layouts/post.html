@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<!-- post.html -->
+<section class="module-small">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="post">
+          <div class="post-header font-alt">
+            <h1 class="post-title">{{ page.title }}</h1>
+            <div class="post-meta">By&nbsp;<a href="#">{{ page.author }}</a> | {{ page.date | date_to_string }} | {% for tag in page.tags %} <a href="{{ site.baseurl }}/tags#{{ tag }}">{{ tag }}{% unless forloop.last %},{% endunless %} </a>{% endfor %}
+            </div>
+          </div>
+          <div class="post-entry">
+            {{ content }}
+          </div>
+        </div>
+        {% if page.comments %}{% include disqus.html %}{% endif %}
+      </div>
+      {% include sidebar.html %}
+    </div>
+  </div>
+</section>
+{% include page-footer.html %}
+{% include site-footer.html %}
